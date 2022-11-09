@@ -8,11 +8,8 @@
 	"item": [
 		{
 			"name": "insert payroll",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
 			"request": {
-				"method": "GET",
+				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "formdata",
@@ -20,7 +17,7 @@
 						{
 							"key": "file",
 							"type": "file",
-							"src": []
+							"src": "/E:/Kantor/Refactory/Engineer/Skill Test/LP/Skill Test Replacement/Skill Test LP/data/data_payroll.csv"
 						}
 					]
 				},

@@ -16,8 +16,7 @@ func main() {
 		AllowHeaders: []string{"*"},
 	}))
 	db := config.InitGorm()
-	data := internal.GetData()
-	controller := internal.NewController(db, data)
+	controller := internal.Controller(db)
 	r.POST("/insert-payroll", controller.InsertPayroll)
 
 	r.Run(":8080")
