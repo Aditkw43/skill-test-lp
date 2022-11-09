@@ -1,7 +1,6 @@
 package internal
 
 import (
-	"mime/multipart"
 	"time"
 )
 
@@ -42,21 +41,4 @@ type PayrollFailedLog struct {
 	AccountNumber string    `gorm:"not null;" json:"account_number"`
 	CreatedAt     time.Time `gorm:"not null;" json:"created_at"`
 	CreatedBy     time.Time `gorm:"not null;" json:"created_by"`
-}
-
-type RequestCsv struct {
-	Batch         string `csv:"batch"`
-	AccountName   string `csv:"account_name"`
-	AccountNumber string `csv:"account_number"`
-	UserId        int    `csv:"user_id"`
-	Amount        int    `csv:"amount"`
-	Status        string `csv:"status"`
-}
-
-type UserId struct {
-	UserId int `csv:"user_id"`
-}
-
-type csvUploadInput struct {
-	CsvFile *multipart.FileHeader `form:"file" binding:"required"`
 }
