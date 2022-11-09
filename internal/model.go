@@ -2,17 +2,16 @@ package internal
 
 import (
 	"time"
-
-	"gorm.io/gorm"
 )
 
 type User struct {
-	gorm.Model
+	ID     uint   `gorm:"primaryKey"`
 	Name   string `gorm:"size:255;not null" json:"name"`
 	Status bool   `gorm:"not null;" json:"status"`
 }
 
 type Payroll struct {
+	ID            uint      `gorm:"primaryKey"`
 	Batch         int       `gorm:"not null" json:"batch"`
 	UserId        int       `gorm:"not null;" json:"user_id"`
 	AccountName   string    `gorm:"not null;" json:"account_name"`
@@ -24,6 +23,7 @@ type Payroll struct {
 }
 
 type PayrollLog struct {
+	ID           uint      `gorm:"primaryKey"`
 	Batch        int       `gorm:"not null" json:"batch"`
 	TotalSuccess bool      `gorm:"not null;" json:"total_success"`
 	TotalFailed  bool      `gorm:"not null;" json:"total_failed"`
@@ -33,6 +33,7 @@ type PayrollLog struct {
 }
 
 type PayrollFailedLog struct {
+	ID            uint      `gorm:"primaryKey"`
 	Batch         int       `gorm:"not null" json:"batch"`
 	UserId        int       `gorm:"not null;" json:"user_id"`
 	FileName      string    `gorm:"not null" json:"file_name"`

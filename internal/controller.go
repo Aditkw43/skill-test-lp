@@ -22,5 +22,5 @@ func NewController(db *gorm.DB, data []*RequestCsv) Controllers {
 }
 
 func (s *controllers) InsertPayroll(c *gin.Context) {
-
+	
 }
