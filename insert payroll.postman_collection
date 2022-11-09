@@ -1,0 +1,42 @@
+{
+	"info": {
+		"_postman_id": "7b9462cb-a97d-4c65-9aec-df1dc8dc7c82",
+		"name": "Skill-test-lp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23999636"
+	},
+	"item": [
+		{
+			"name": "insert payroll",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/insert-payroll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"insert-payroll"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
